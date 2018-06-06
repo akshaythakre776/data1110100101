@@ -1,0 +1,8 @@
+db.host = mudb.mulesoft-training.com
+db.port = 3306
+db.user = mule
+db.password = mule
+db.database = training
+American table: american
+American table version2: flights
+Account table: accounts
