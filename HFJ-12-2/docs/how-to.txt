@@ -1,0 +1,47 @@
+Objective:
+------------
+
+This document explains how to run this application.
+
+Steps on how to run demo:
+---------------------------------
+
+1.	youcube13.html
+
+what it does:
+---------------
+
+demo youcube12.html is reworked with support for reading and writing blog entries from/to an XML file using Ajax
+(observe line no 62, 68, 71) 
+
+Also, refer ajax.js; external JavaScript code to help in carrying out Ajax requests
+Also, refer date.js; external JavaScript code to help in formatting dates
+
+required resources: 
+-----------------------
+ajax.js   
+date.js  
+
+cube.png - Cube image that appears on the YouCube web page
+cube777.png - Seven-sided cube image used in a YouCube blog entry
+cubeapart.png - Disassembled cube image used in a YouCube blog entry
+
+blog.xml - XML file containing YouCube blog entries
+
+2. youcubeadd.html
+
+what it does:
+---------------
+
+YouCube blog entry addition web page used to add blog entries through a web interface
+(Observe line no 22,30)  
+
+You can view added blog entry by executing youcube13.html
+ 
+required resources: 
+-----------------------
+
+addblogentry.jsp - JSP server script that processes blog entry additions for the YouCube blog entry addition web page
+ 
+ajax.js - External JavaScript code to help in carrying out Ajax requests 
+date.js - External JavaScript code to help in formatting dates

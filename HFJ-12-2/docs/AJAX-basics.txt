@@ -1,0 +1,59 @@
+Objective:
+------------
+
+This document explains AJAX 
+
+(
+	Ref: Head First JAVAScript
+	Chapter#12 Dynamic data
+) 
+
+Notes:
+--------
+XML is markup language used to format any kind of data.
+It is generally used as standard data exchange format. It is extensible in nature.
+
+XHTML is a version of HTML which adheres to more rigid syntax rules of XML
+		XML syntax rules 
+			- tags containing content must always appear as matched pairs.
+			- tags with no closing tags must be coded with a space and forward slash at the end 	
+			- attribute values to be enclosed in quotes
+			
+AJAX is a programming technique which allows web page to dynamically receive data from web server.
+AJAX request can be asynchronous most of the times; 
+so it can wait for the request to be processed by a server without freezing a web page.
+
+We can create data-driven applications using AJAX.
+It uses either GET or POST http methods to make request.
+
+Communication between client browser and server in context of AJAX involves these steps
+	1. The browser sends the request to the server and waits for the response.
+	2. The server receives the request and gets to work creating a response.
+	3. The server creates the response and sends it.
+	4. JavaScript code on client receivers this response and incorporates it into web page.  
+	
+JavaScript has built-in object XMLHttpRquest which is used to initiate AJAX requests and handle AJAX response. 
+It has following methods and properties
+	properties:
+	 
+		readyState -				numeric state of the request. e.g. 4 loaded, 3 receiving 
+		status -						HTTP status code of the response 
+		onreadystatechange-	a reference to the function that is called when the state of the request changes
+		responseText-			the resonse data returned from the server, as a string of plain text
+		responseXML-			the response data returned from the server as an object consisting of a tree of XML nodes
+		
+	methods: 	
+	
+		open()-						prepares a request by specifying its type and URL	
+		send()-						sends the request to the server for processing 
+		abort()-						cancel the request
+	
+For older IE versions, use older ActiveX object instead of XMLHttpRquest
+	
+	
+Referenced in these pages:
+---------------------------------
+
+youcube13.html; youcubeadd.html	
+	
+    
