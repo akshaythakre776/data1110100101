@@ -1,0 +1,60 @@
+Github URL
+
+>git clone https://github.com/callistaenterprise/blog-microservices.git
+>cd blog-microservices
+>git checkout -b B1 M1.1
+
+Blog URL
+
+http://callistaenterprise.se/blogg/teknik/2015/04/10/building-microservices-with-spring-cloud-and-netflix-oss-part-1/
+
+
+
+
+
+   products: IProduct[] = [
+        {
+            "productId": 2,
+            "productName": "Garden Cart",
+            "productCode": "GDN-0023",
+            "releaseDate": "March 18, 2016",
+            "description": "15 gallon capacity rolling garden cart",
+            "price": 32.99,
+            "starRating": 4.2,
+            "imageUrl": "https://images.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg?h=350&auto=compress&cs=tinysrgb"
+        },
+        {
+            "productId": 5,
+            "productName": "Hammer",
+            "productCode": "TBX-0048",
+            "releaseDate": "May 21, 2016",
+            "description": "Curved claw steel hammer",
+            "price": 8.9,
+            "starRating": 4.8,
+            "imageUrl": "https://static.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg"
+        }
+    ];
+
+
+  return[
+        {
+            "productId": 2,
+            "productName": "Garden Cart",
+            "productCode": "GDN-0023",
+            "releaseDate": "March 18, 2016",
+            "description": "15 gallon capacity rolling garden cart",
+            "price": 32.99,
+            "starRating": 4.2,
+            "imageUrl": "https://images.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg?h=350&auto=compress&cs=tinysrgb"
+        },
+        {
+            "productId": 5,
+            "productName": "Hammer",
+            "productCode": "TBX-0048",
+            "releaseDate": "May 21, 2016",
+            "description": "Curved claw steel hammer",
+            "price": 8.9,
+            "starRating": 4.8,
+            "imageUrl": "https://static.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg"
+        }
+    ];
