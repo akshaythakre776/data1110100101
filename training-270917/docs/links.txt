@@ -1,0 +1,10 @@
+https://fts.capgemini.com/private/13124577893886/microservices-architecture.zip
+
+
+inside build.gradle
+
+//     maven { url "http://10.109.32.183:8081/nexus/content/groups/public" }
+
+For proxy issue
+
+https://stackoverflow.com/questions/23111631/cannot-download-docker-images-behind-a-proxy
