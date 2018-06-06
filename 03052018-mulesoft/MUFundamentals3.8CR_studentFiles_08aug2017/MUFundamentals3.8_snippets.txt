@@ -1,0 +1,132 @@
+MuleSoft.U Development Fundamentals 3.8 - Snippets
+
+* MODULE 1 **********************************************************
+
+* ProgrammableWeb
+http://www.programmableweb.com/
+
+* MuleSoft Developer portal for popular APIs
+https://anypoint.mulesoft.com/apiplatform/popular#/portals
+
+* MuleSoft Developer portal for Anypoint Platform
+https://anypoint.mulesoft.com/apiplatform/anypoint-platform/#/portals
+
+* American Flights web service
+http://training-american-ws.cloudhub.io/api/flights
+
+* American Flights API post body
+{
+  "code": "GQ574",
+  "price": 399,
+  "departureDate": "2016/12/20",
+  "origin": "ORD",
+  "destination": "SFO",
+  "emptySeats": 200,
+  "plane": {"type": "Boeing 747", "totalSeats": 400}
+}
+
+* American Flights API
+http://training-american-api.cloudhub.io/flights
+
+* American Flights API client_id for APDev fictitious application
+d1374b15c6864c3682ddbed2a247a826
+
+* American Flights API client_secret for APDev fictitious application
+4a87fe7e2e43488c927372AEF981F066
+
+* MODULE 3 **********************************************************
+
+* Anypoint Exchange description text
+The American Flights API is a system API for operations on the american table in the training database.
+Supported operations
+Get all flights
+Get a flight with a specific ID
+
+{
+  "id": 1,	
+  "code": "GQ574",
+  "price": 399,
+  "departureDate": "2016/12/20",
+  "origin": "ORD",
+  "destination": "SFO",
+  "emptySeats": 200,
+  "plane": {"type": "Boeing 747", "totalSeats": 400}
+}
+
+
+Add a flight
+
+* American Flights API - /{ID} DELETE and PUT methods
+    delete:
+      responses:
+        200:
+          body:
+            application/json:
+              example:
+                message: Flight deleted (but not really)
+    put:
+      body:
+        application/json:
+          type: AmericanFlight
+          example: !include examples/AmericanFlightNoIDExample.raml
+      responses:
+        200:
+          body:
+            application/json:
+              example:
+                message: Flight updated (but not really)
+
+* MODULE 4 **********************************************************
+
+* MySQL database
+db.host = mudb.mulesoft-training.com
+db.port = 3306
+db.user = mule
+db.password = mule
+db.database = training
+American table: american
+American table version2: flights
+Account table: accounts
+Account list URL:  http://mu.mulesoft-training.com/essentials/accounts/show
+or http://localhost:9090/essentials/accounts/show.html
+
+* Derby database
+driverName: org.apache.derby.jdbc.ClientDriver
+url: jdbc:derby://localhost:1527/memory:training
+
+* SQL expression for American Flights API
+WHERE ID = #[message.inboundProperties.'http.uri.params'.ID]
+
+* American Flights API - /flights POST response example
+{"message": "Flight added (but not really)"}
+
+* MODULE 5 **********************************************************
+
+* Your client ID
+
+
+* Your client secret
+
+
+* MODULE 8 **********************************************************
+
+* United RESTful web service
+http://mu.mulesoft-training.com/essentials/united/flights
+or if using mulesoft-training-services.jar application:
+http://localhost:9090/essentials/united/flights
+
+* Delta SOAP web service
+http://mu.mulesoft-training.com/essentials/delta?wsdl
+or if using mulesoft-training-services.jar application:
+http://localhost:9191/essentials/delta?wsdl
+
+* MODULE 12 **********************************************************
+
+* JMS
+ActiveMQ Broker URL: tcp://jms.mulesoft-training.com:61616
+or if using mulesoft-training-services.jar application:
+tcp://localhost:61616
+
+Form URL: http://mu.mulesoft-training.com/jms/
+or if using mulesoft-training-services.jar application:
+http://localhost:9090/essentials/jmsform.html
