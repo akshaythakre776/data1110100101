@@ -1,0 +1,17 @@
+1. Write a program to simulate banking transactions. Following are the constraints for this assignment.
+   	Bank can perform following operations
+	You also need to store information about Account and Customers.
+
+
+		transferAmount(toAccount, fromAccount, amount):void
+		showTotalBalance():void
+		accounts: Account[]
+
+		Deposit(amount):Boolean
+		Withdraw(amount):Boolean
+
+		Id : int
+		Balance:double
+
+	
+

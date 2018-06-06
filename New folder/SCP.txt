@@ -1,0 +1,1 @@
+ scp -r -i file.pem user@192.10.10.10:/home/backup /home/user/Desktop/

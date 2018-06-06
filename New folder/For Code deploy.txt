@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/44853819/issue-creating-zip-file-through-aws-codebuild-for-nodejs-lambda

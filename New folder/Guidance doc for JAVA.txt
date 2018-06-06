@@ -1,0 +1,113 @@
+A user story/ scenario will be given to a candidate. 
+Consider that you are part of a team who is working on PAIR PROGRAMMING.
+
+Most of the scenarios discussed could be developed as a standalone JAVA application.
+
+For persistence, in memory data structures was sufficient; no db access required.
+
+
+A candidate has to design HLD (CLASS DIAGRAM)for a given problem statement.
+You have to understood and apply Architectural pattern like IoC, MVC.
+Also give a thought on 'Separation of concern', 'open close principle'.
+You have to provide validation/constraint checks
+
+
+Write test cases (how to sample data fixture) covering edge/boundry case, sanity check.  
+
+
+Scenario 1:
+
+	This is related to book library. Provide operations to add/remove/update/delete entities like a member, a book.
+	The system should be able to lend a book to registered members. One of the constraint given is a member can atmost 
+	be given 6 books only at a time.
+
+Scenario 2:
+
+	Create an application to simulate scenario for a bank. There are 2 type of Account currently. Lets say SAVINGS and CURRENT.
+	SAVINGS account can be opened by an individual. CURRENT account can be opened by corporate only.
+	The operations that should be provided by system are
+		Add/remove/update/delete an account.
+		Calculate interest for a given account.
+		in future, new type of account like Loan account, recurring account should be added.
+		
+	
+Scenario 3:
+
+	Lets assume that you are working for a shopping application where user is already registered in a system.
+	He/She has specified interests during registeration process itself.
+	So now when user logs in next time, he/she should be shown products according to interests they had selected earlier.
+	Suppose this is a web application and View/Controller are already defined.
+	
+	You are required to design MODEL for this system,now.
+
+	
+	
+Topic wise questions:
+
+
+Exception Handling:
+
+	1> What is difference between Checked and Unchecked exceptions?
+	2> Why compiler forces programmer to handle checked exceptions?
+	3> Exception handling features added in JDK 7.0.
+	
+The collection framework:
+
+	1> on what factors, you wiil decide data structure for a given scenario?
+	2> What is difference between Comparable and Comparator interface? 	
+	3> Hash based data structure and their counterpoarts in Concurrency?
+	4> ConcurrentHashmap is defined in which package?
+	5> In which version, Concurrency framework was added?
+	6> Explain a scenario when we get ConcurrentModificationException?	
+	7> Fail fast iterators, how they work?
+	8> Fail safe iterators; how to create them?
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+		
+		
+		
+		

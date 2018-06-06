@@ -1,0 +1,7 @@
+$ curl -s -H "Accept: application/json" http://localhost:8761/eureka/apps | jq '.applications.application[] | {service: .name, ip: .instance.ipAddr, port: .instance.port."$"}'
+$ curl -s localhost:8765/productcomposite/product/1 | jq .
+
+$ curl -s localhost:51658/product/1 | jq .
+$ curl -s localhost:59745/product/1 | jq .
+$ curl -s localhost:59178/review?productId=1 | jq .
+$ curl -s localhost:48014/recommendation?productId=1 | jq .

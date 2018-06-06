@@ -1,0 +1,34 @@
+Day 1	
+		Spring Overview			
+		Spring IOC			
+		Spring JDBC			
+		
+Day 2	
+		Spring MVC			
+		
+Day 3	
+		Spring JPA Data			
+		Create First Spring Boot Application			
+		Bootstrapping Project Creation with Spring Initialzr			
+		Spring Boot IDE Support: Spring Initialzr			
+		
+Day 4	
+		Spring Boot IDE Support: Property Auto Completion and Type Safety			
+		Spring Boot IDE Support: Overriding App Properties at Runtime			
+		Automatic and Fast App Restarts with Spring Boot Devtools			
+		Introduction and Review of Auto Configuration			
+		Generating an Auto Configuration Report			
+		Excluding Unnecessary or Misconfigured Auto Configurations			
+		Reducing Code with Custom Auto Configurations			
+		Reconfiguring and Fine-tuning Auto Configurations			
+		Using Properties and YAML files			
+		Hands on Tuning of the Demo Application's Auto Configuration			
+		@ConditionalOn* Annotations in Depth			
+		Writing Our Own Custom Auto Configuration			
+		
+		
+Day 5	
+		Creating Spring Boot Web Service – SOAP and REST			
+		DateSource Usage			
+		Writing Junit test cases for soap and restful web services			
+		Spring Actuator – Deep Dive into Non-functional implementation(Security, metrics, auditing, health monitoring etc)			

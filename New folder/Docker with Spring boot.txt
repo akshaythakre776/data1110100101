@@ -1,0 +1,23 @@
+buildscript {
+    ...
+    dependencies {
+        ...
+        classpath('se.transmode.gradle:gradle-docker:1.2')
+    }
+}
+
+group = 'springio'
+
+...
+apply plugin: 'docker'
+
+task buildDocker(type: Docker, dependsOn: build) {
+  applicationName = jar.baseName
+  dockerfile = file('Dockerfile')
+  doFirst {
+    copy {
+      from jar
+      into "${stageDir}/target"
+    }
+  }
+}

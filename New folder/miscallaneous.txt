@@ -1,0 +1,150 @@
+http://repo.maven.apache.org/maven2
+
+insert into Car (MAKE,MODEL,MODEL_YEAR) values(?,?,?)
+
+
+
+
+    // https://mvnrepository.com/artifact/org.springframework/spring-core
+	compile group: 'org.springframework', name: 'spring-core', version: '3.2.9.RELEASE'
+    
+    // https://mvnrepository.com/artifact/org.springframework/spring-context-support
+	compile group: 'org.springframework', name: 'spring-context-support', version: '3.2.9.RELEASE'
+
+	// https://mvnrepository.com/artifact/org.springframework/spring-webmvc
+	compile group: 'org.springframework', name: 'spring-webmvc', version: '3.2.9.RELEASE'
+    
+    // https://mvnrepository.com/artifact/org.springframework/spring-web
+	compile group: 'org.springframework', name: 'spring-web', version: '3.2.9.RELEASE'
+
+	compileOnly group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+
+	// https://mvnrepository.com/artifact/jstl/jstl
+	compile group: 'jstl', name: 'jstl', version: '1.2'
+
+
+	// https://mvnrepository.com/artifact/mysql/mysql-connector-java
+	compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
+
+	// https://mvnrepository.com/artifact/org.springframework/spring-webmvc
+	compile group: 'org.springframework', name: 'spring-webmvc', version: '3.2.9.RELEASE'
+
+
+
+//FOR devtools
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web:1.3.0.RELEASE")
+    compile 'org.slf4j:slf4j-api:1.7.13'
+    dev("org.springframework.boot:spring-boot-devtools")
+}
+
+
+// For Datasource configuration
+
+
+
+spring.datasource.url=jdbc:mysql://localhost:3306/test
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+
+spring.datasource.max-active=10
+spring.datasource.max-idle=8
+spring.datasource.max-wait=10000
+spring.datasource.min-evictable-idle-time-millis=1000
+spring.datasource.min-idle=8
+spring.datasource.time-between-eviction-runs-millis=1
+
+	@RequestMapping(value = "shipwrecks/{id}", method = RequestMethod.GET)
+	public Shipwreck get(@PathVariable Long id) {
+		return shipwreckRepository.findOne(id);
+	}
+
+
+	@RequestMapping(value = "shipwrecks/{id}", method = RequestMethod.PUT)
+	public Shipwreck update(@PathVariable Long id, @RequestBody Shipwreck shipwreck) {
+		Shipwreck existingShipwreck = shipwreckRepository.findOne(id);
+		BeanUtils.copyProperties(shipwreck, existingShipwreck);
+		return shipwreckRepository.saveAndFlush(existingShipwreck);
+	}
+
+	@RequestMapping(value = "shipwrecks/{id}", method = RequestMethod.DELETE)
+	public Shipwreck delete(@PathVariable Long id) {
+		Shipwreck existingShipwreck = shipwreckRepository.findOne(id);
+		shipwreckRepository.delete(existingShipwreck);
+		return existingShipwreck;
+	}
+
+// FOR JAVA 8 on Ubuntu
+	
+	apt-add-repository ppa:webupd8team/java
+    apt-get update
+    apt-get install oracle-java8-installer
+
+	
+	
+	
+	
+	
+// Dockerfile	
+	
+FROM frolvlad/alpine-oraclejdk8:slim
+VOLUME /tmp
+ADD gs-spring-boot-docker-0.1.0.jar app.jar
+RUN sh -c 'touch /app.jar'
+ENV JAVA_OPTS=""
+ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar" ]	
+	
+	
+	
+	
+// Inside build.gradle	
+
+
+
+buildscript {
+    ...
+    dependencies {
+        ...
+        classpath('se.transmode.gradle:gradle-docker:1.2')
+    }
+}
+
+group = ''
+
+...
+apply plugin: 'docker'
+
+task buildDocker(type: Docker, dependsOn: build) {
+  push = true
+  applicationName = jar.baseName
+  dockerfile = file('src/main/docker/Dockerfile')
+  doFirst {
+    copy {
+      from jar
+      into stageDir
+    }
+  }
+}
+
+
+>docker images
+
+>docker run -p 8080:8080 -t springio/gs-spring-boot-docker
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
